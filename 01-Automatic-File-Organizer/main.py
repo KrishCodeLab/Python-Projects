@@ -8,22 +8,22 @@ location = os.getcwd()
 print(location)
 
 
-system_path=r"C:\Users\Krushana"
-userdefined=input("Enter Directory : ")
-joined_path=os.path.join(system_path,userdefined)
-print(joined_path)
+base_path=r"C:\Users\Krushana"
+directory=input("Enter Directory : ")
+functional_path=os.path.join(base_path,directory)
+print(functional_path)
 # print(os.listdir(joined_path))
 
 # Check Path Exits in system or not
-if os.path.exists(joined_path) and os.path.isdir(joined_path):
+if os.path.exists(functional_path) and os.path.isdir(functional_path):
   print("Directory Exits")
   # What files are present inside the folder ?
-  list_of_file=os.listdir(joined_path)
+  list_of_file=os.listdir(functional_path)
   print(list_of_file)
 
 # Which entries are files and folders ?
   for file in list_of_file:
-    full_path=os.path.join(joined_path,file)
+    full_path=os.path.join(functional_path,file)
     print(full_path)
   
     if os.path.isfile(full_path):
