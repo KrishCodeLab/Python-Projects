@@ -33,12 +33,19 @@ if os.path.exists(functional_path) and os.path.isdir(functional_path):
       file_name=file_info[0]
       file_extension=file_info[1]
       files_list.append(file)
-      
+      if file_extension.lower()==".txt":
+          print(file_name," is text file")
+      elif file_extension.lower()==".py":
+          print(file_name," is python file")
+      elif file_extension.lower()==".java":
+          print(file_name," is java file")
+      elif file_extension.lower()==".jpg":
+          print(file_name," is jpg photo file")
   
-      print("It is File "+ file)
+    
     elif os.path.isdir(full_path):
       folders_list.append(file)
-      print("It is Folder "+ file)
+    
   print(files_list)
   print(folders_list)
   
