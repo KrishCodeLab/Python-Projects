@@ -12,13 +12,37 @@ The project is being developed incrementally, with a focus on Python's built-in 
 
 ## Current Features
 
-- Retrieve the current working directory using `os.getcwd()`.
-- Accept a user-defined directory path.
-- Validate directory paths using `os.path.exists()` and `os.path.isdir()`.
-- Retrieve directory contents using `os.listdir()`.
-- Identify files using `os.path.isfile()`.
-- Identify directories using `os.path.isdir()`.
-- Construct paths using `os.path.join()`.
+Phase 1: Directory Handling — Completed
+
+    -Retrieved the current working directory using os.getcwd().
+
+    -Accepted a user-defined directory path.
+
+    -Constructed paths using os.path.join().
+
+    -Validated directory paths using os.path.exists() and os.path.isdir().
+
+    -Retrieved directory contents using os.listdir().
+
+    -Identified files using os.path.isfile().
+
+    -Identified directories using os.path.isdir().
+
+    -Stored filenames and directory names in separate lists.
+
+Phase 2: File Extension Identification — Completed
+
+    -Extracted filenames and extensions using os.path.splitext().
+
+    -Separated filenames from their extensions.
+
+    -Implemented case-insensitive extension comparison using .lower().
+
+    -Identified file types based on their extensions.
+
+    -Classified files such as .txt, .py, .java, and .jpg.
+
+    -Stored filenames for further processing.
 
 ## Planned Features
 
@@ -76,7 +100,7 @@ python main.py
 | Phase | Description                    | Status    |
 | ----- | ------------------------------ | --------- |
 | 1     | Directory Handling             | Completed |
-| 2     | File Extension Identification  | Upcoming  |
+| 2     | File Extension Identification  | Completed |
 | 3     | Category Folder Creation       | Upcoming  |
 | 4     | Automatic File Movement        | Upcoming  |
 | 5     | Exception Handling             | Upcoming  |
