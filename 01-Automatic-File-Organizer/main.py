@@ -33,15 +33,71 @@ if os.path.exists(functional_path) and os.path.isdir(functional_path):
       file_name=file_info[0]
       file_extension=file_info[1]
       files_list.append(file)
+
       if file_extension.lower()==".txt":
+          directory="txt"
+          directory_creation_path=os.path.join(functional_path,directory)
+
+          if os.path.exists(directory_creation_path) and os.path.isdir(directory_creation_path):
+             print("Folder Already Exist !!! ")
+             
+          else:
+            # Creating folder in user specified path
+             os.mkdir(directory_creation_path)
+             print("Folder Created Successfully !!! ")
+             
           print(file_name," is text file")
       elif file_extension.lower()==".py":
+          directory="python"
+          directory_creation_path=os.path.join(functional_path,directory)
+          
+          if os.path.exists(directory_creation_path) and os.path.isdir(directory_creation_path):
+             print("Folder Already Exist !!! ")
+                       
+          else:
+          # Creating folder in user specified path
+              os.mkdir(directory_creation_path)
+              print("Folder Created Successfully !!! ")
+
           print(file_name," is python file")
       elif file_extension.lower()==".java":
+          directory="java"
+          directory_creation_path=os.path.join(functional_path,directory)
+                    
+          if os.path.exists(directory_creation_path) and os.path.isdir(directory_creation_path):
+              print("Folder Already Exist !!! ")
+                                 
+          else:
+          # Creating folder in user specified path
+              os.mkdir(directory_creation_path)
+              print("Folder Created Successfully !!! ")
+
           print(file_name," is java file")
       elif file_extension.lower()==".jpg":
+          directory="jpg"
+          directory_creation_path=os.path.join(functional_path,directory)
+                    
+          if os.path.exists(directory_creation_path) and os.path.isdir(directory_creation_path):
+              print("Folder Already Exist !!! ")
+                                 
+          else:
+          # Creating folder in user specified path
+              os.mkdir(directory_creation_path)
+              print("Folder Created Successfully !!! ")
+
           print(file_name," is jpg photo file")
-      elif file_extension.lower()==" ":
+      elif file_extension=="":
+          directory="NoExtensionFiles"
+          directory_creation_path=os.path.join(functional_path,directory)
+                    
+          if os.path.exists(directory_creation_path) and os.path.isdir(directory_creation_path):
+              print("Folder Already Exist !!! ")
+                                 
+          else:
+          # Creating folder in user specified path
+              os.mkdir(directory_creation_path)
+              print("Folder Created Successfully !!! ")
+
           print(file_name," has no extension")
       
   
