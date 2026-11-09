@@ -41,6 +41,9 @@ if os.path.exists(functional_path) and os.path.isdir(functional_path):
           print(file_name," is java file")
       elif file_extension.lower()==".jpg":
           print(file_name," is jpg photo file")
+      elif file_extension.lower()==" ":
+          print(file_name," has no extension")
+      
   
     
     elif os.path.isdir(full_path):
