@@ -12,7 +12,7 @@ The project is being developed incrementally, with a focus on Python's built-in 
 
 ## Current Features
 
-Phase 1: Directory Handling — Completed
+### Phase 1: Directory Handling — Completed
 
     -Retrieved the current working directory using os.getcwd().
 
@@ -30,7 +30,7 @@ Phase 1: Directory Handling — Completed
 
     -Stored filenames and directory names in separate lists.
 
-Phase 2: File Extension Identification — Completed
+### Phase 2: File Extension Identification — Completed
 
     -Extracted filenames and extensions using os.path.splitext().
 
@@ -43,6 +43,21 @@ Phase 2: File Extension Identification — Completed
     -Classified files such as .txt, .py, .java, and .jpg.
 
     -Stored filenames for further processing.
+### Phase 3: Category Folder Creation
+
+   -Created category folders dynamically based on file extensions.
+   -Used `os.path.join()` to construct complete directory paths.
+   -Checked whether category folders already exist using `os.path.exists()` and `os.path.isdir()`.
+   -Created missing directories using `os.mkdir()`.
+   -Avoided duplicate folder creation by checking directory existence before creating it.
+   -Added support for files with different extensions:
+     -`.txt` → `txt`
+     -`.py` → `python`
+     -`.java` → `java`
+     -`.jpg` → `jpg`
+     -Files without extensions → `NoExtensionFiles`
+
+   
 
 ## Planned Features
 
@@ -101,7 +116,7 @@ python main.py
 | ----- | ------------------------------ | --------- |
 | 1     | Directory Handling             | Completed |
 | 2     | File Extension Identification  | Completed |
-| 3     | Category Folder Creation       | Upcoming  |
+| 3     | Category Folder Creation       | Completed |
 | 4     | Automatic File Movement        | Upcoming  |
 | 5     | Exception Handling             | Upcoming  |
 | 6     | Complete Organizer Integration | Upcoming  |
