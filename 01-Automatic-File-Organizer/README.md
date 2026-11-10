@@ -14,50 +14,61 @@ The project is being developed incrementally, with a focus on Python's built-in 
 
 ### Phase 1: Directory Handling — Completed
 
-    -Retrieved the current working directory using os.getcwd().
+- Retrieved the current working directory using os.getcwd().
 
-    -Accepted a user-defined directory path.
+- Accepted a user-defined directory path.
 
-    -Constructed paths using os.path.join().
+- Constructed paths using os.path.join().
 
-    -Validated directory paths using os.path.exists() and os.path.isdir().
+- Validated directory paths using os.path.exists() and os.path.isdir().
 
-    -Retrieved directory contents using os.listdir().
+- Retrieved directory contents using os.listdir().
 
-    -Identified files using os.path.isfile().
+- Identified files using os.path.isfile().
 
-    -Identified directories using os.path.isdir().
+- Identified directories using os.path.isdir().
 
-    -Stored filenames and directory names in separate lists.
+- Stored filenames and directory names in separate lists.
 
 ### Phase 2: File Extension Identification — Completed
 
-    -Extracted filenames and extensions using os.path.splitext().
+- Extracted filenames and extensions using os.path.splitext().
 
-    -Separated filenames from their extensions.
+- Separated filenames from their extensions.
 
-    -Implemented case-insensitive extension comparison using .lower().
+- Implemented case-insensitive extension comparison using .lower().
 
-    -Identified file types based on their extensions.
+- Identified file types based on their extensions.
 
-    -Classified files such as .txt, .py, .java, and .jpg.
+- Classified files such as .txt, .py, .java, and .jpg.
 
-    -Stored filenames for further processing.
+- Stored filenames for further processing.
 ### Phase 3: Category Folder Creation
 
-   -Created category folders dynamically based on file extensions.
-   -Used `os.path.join()` to construct complete directory paths.
-   -Checked whether category folders already exist using `os.path.exists()` and `os.path.isdir()`.
-   -Created missing directories using `os.mkdir()`.
-   -Avoided duplicate folder creation by checking directory existence before creating it.
-   -Added support for files with different extensions:
-     -`.txt` → `txt`
-     -`.py` → `python`
-     -`.java` → `java`
-     -`.jpg` → `jpg`
-     -Files without extensions → `NoExtensionFiles`
+- Created category folders dynamically based on file extensions.
+- Used `os.path.join()` to construct complete directory paths.
+- Checked whether category folders already exist using `os.path.exists()` and `os.path.isdir()`.
+- Created missing directories using `os.mkdir()`.
+- Avoided duplicate folder creation by checking directory existence before creating it.
+- Added support for files with different extensions:
+    - `.txt` → `txt`
+    - `.py` → `python`
+    - `.java` → `java`
+    - `.jpg` → `jpg`
+    - Files without extensions → `NoExtensionFiles`
 
-   
+### Phase 4: Automatic File Movement
+
+- Imported the `shutil` module for file operations.
+- Used `shutil.move()` to move files into their respective category folders.
+- Constructed source and destination paths using `os.path.join()`.
+- Checked whether category folders already exist before moving files.
+- Created missing category folders using `os.mkdir()`.
+- Implemented duplicate filename detection using `os.listdir()`.
+- Prevented moving files when a matching filename already exists in the destination folder.
+- Successfully organized multiple files based on their extensions.
+
+ 
 
 ## Planned Features
 
@@ -117,7 +128,7 @@ python main.py
 | 1     | Directory Handling             | Completed |
 | 2     | File Extension Identification  | Completed |
 | 3     | Category Folder Creation       | Completed |
-| 4     | Automatic File Movement        | Upcoming  |
+| 4     | Automatic File Movement        | Completed |
 | 5     | Exception Handling             | Upcoming  |
 | 6     | Complete Organizer Integration | Upcoming  |
 
