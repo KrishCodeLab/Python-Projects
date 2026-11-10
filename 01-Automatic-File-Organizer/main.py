@@ -57,6 +57,10 @@ if os.path.exists(functional_path) and os.path.isdir(functional_path):
           
           if os.path.exists(directory_creation_path) and os.path.isdir(directory_creation_path):
              print("Folder Already Exist !!! ")
+             #  shutil.move(source,destination)
+             destination_path=os.path.join(functional_path,directory)
+             shutil.move(full_path,destination_path)
+             print("File added successfully !!! ")
                        
           else:
           # Creating folder in user specified path
@@ -70,7 +74,9 @@ if os.path.exists(functional_path) and os.path.isdir(functional_path):
                     
           if os.path.exists(directory_creation_path) and os.path.isdir(directory_creation_path):
               print("Folder Already Exist !!! ")
-                                 
+              destination_path=os.path.join(functional_path,directory)
+              shutil.move(full_path,destination_path)
+              print("File added successfully !!! ")                                 
           else:
           # Creating folder in user specified path
               os.mkdir(directory_creation_path)
@@ -83,7 +89,9 @@ if os.path.exists(functional_path) and os.path.isdir(functional_path):
                     
           if os.path.exists(directory_creation_path) and os.path.isdir(directory_creation_path):
               print("Folder Already Exist !!! ")
-                                 
+              destination_path=os.path.join(functional_path,directory)
+              shutil.move(full_path,destination_path)
+              print("File added successfully !!! ")                                 
           else:
           # Creating folder in user specified path
               os.mkdir(directory_creation_path)
@@ -96,7 +104,9 @@ if os.path.exists(functional_path) and os.path.isdir(functional_path):
                     
           if os.path.exists(directory_creation_path) and os.path.isdir(directory_creation_path):
               print("Folder Already Exist !!! ")
-                                 
+              destination_path=os.path.join(functional_path,directory)
+              shutil.move(full_path,destination_path)
+              print("File added successfully !!! ")                                
           else:
           # Creating folder in user specified path
               os.mkdir(directory_creation_path)
