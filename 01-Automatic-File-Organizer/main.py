@@ -49,6 +49,9 @@ if os.path.exists(functional_path) and os.path.isdir(functional_path):
             # Creating folder in user specified path
              os.mkdir(directory_creation_path)
              print("Folder Created Successfully !!! ")
+             destination_path=os.path.join(functional_path,directory)
+             shutil.move(full_path,destination_path)
+             print("File added successfully !!! ")
              
           print(file_name," is text file")
       elif file_extension.lower()==".py":
@@ -66,7 +69,9 @@ if os.path.exists(functional_path) and os.path.isdir(functional_path):
           # Creating folder in user specified path
               os.mkdir(directory_creation_path)
               print("Folder Created Successfully !!! ")
-
+              destination_path=os.path.join(functional_path,directory)
+              shutil.move(full_path,destination_path)
+              print("File added successfully !!! ")
           print(file_name," is python file")
       elif file_extension.lower()==".java":
           directory="java"
@@ -81,6 +86,9 @@ if os.path.exists(functional_path) and os.path.isdir(functional_path):
           # Creating folder in user specified path
               os.mkdir(directory_creation_path)
               print("Folder Created Successfully !!! ")
+              destination_path=os.path.join(functional_path,directory)
+              shutil.move(full_path,destination_path)
+              print("File added successfully !!! ")
 
           print(file_name," is java file")
       elif file_extension.lower()==".jpg":
@@ -96,7 +104,9 @@ if os.path.exists(functional_path) and os.path.isdir(functional_path):
           # Creating folder in user specified path
               os.mkdir(directory_creation_path)
               print("Folder Created Successfully !!! ")
-
+              destination_path=os.path.join(functional_path,directory)
+              shutil.move(full_path,destination_path)
+              print("File added successfully !!! ")
           print(file_name," is jpg photo file")
       elif file_extension=="":
           directory="NoExtensionFiles"
@@ -111,7 +121,9 @@ if os.path.exists(functional_path) and os.path.isdir(functional_path):
           # Creating folder in user specified path
               os.mkdir(directory_creation_path)
               print("Folder Created Successfully !!! ")
-
+              destination_path=os.path.join(functional_path,directory)
+              shutil.move(full_path,destination_path)
+              print("File added successfully !!! ")
           print(file_name," has no extension")
       
   
@@ -119,8 +131,8 @@ if os.path.exists(functional_path) and os.path.isdir(functional_path):
     elif os.path.isdir(full_path):
       folders_list.append(file)
     
-  print(files_list)
-  print(folders_list)
+#   print(files_list)
+#   print(folders_list)
   
 else:
   print("Invalid Directory Path !")
